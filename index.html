@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InvestPro - Aprenda a Investir</title>
+  <style>
+    /* GERAL */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0d0d0d; /* preto */
+      color: #00ff99; /* verde neon */
+    }
+    header {
+      padding: 20px;
+      text-align: center;
+      background: #111;
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      box-shadow: 0 0 15px rgba(0,255,153,0.5);
+    }
+
+    /* CONTAINER */
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* CARDS */
+    .card {
+      background: #111;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 12px rgba(0,255,153,0.05);
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 18px rgba(0,255,153,0.15);
+    }
+    h2 {
+      color: #00ff99;
+    }
+
+    /* FRASE FINAL */
+    .agradecimento {
+      margin: 40px auto;
+      text-align: center;
+      padding: 20px;
+      font-size: 32px;
+      font-weight: bold;
+      color: #00ff99;
+      background: #000;
+      border-radius: 12px;
+      text-shadow: 0 0 12px #00ff99;
+      max-width: 700px;
+      animation: glow 1.8s infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #00ff99; }
+      to { text-shadow: 0 0 25px #00ff99; }
+    }
+
+    /* LOGIN */
+    #loginPage {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      background: #000;
+    }
+    #loginPage input {
+      padding: 12px;
+      width: 260px;
+      border: 2px solid #00ff99;
+      border-radius: 8px;
+      margin-top: 10px;
+      font-size: 16px;
+      background: #111;
+      color: #00ff99;
+    }
+    #loginPage input::placeholder {
+      color: #00ff99aa;
+    }
+    #loginPage button {
+      padding: 12px 20px;
+      margin-top: 15px;
+      background: #00ff99;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      color: #000;
+      transition: 0.3s;
+    }
+    #loginPage button:hover {
+      background: #00cc77;
+    }
+
+    #mainPage { display: none; }
+  </style>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="loginPage">
+  <h1>InvestPro</h1>
+  <p>Digite seu e-mail para entrar:</p>
+  <input type="email" id="emailInput" placeholder="Seu e-mail" />
+  <button onclick="login()">Entrar</button>
+</div>
+
+<!-- PÁGINA PRINCIPAL -->
+<div id="mainPage">
+  <header>INVESTPRO - TUDO SOBRE INVESTIMENTOS</header>
+
+  <div class="container">
+    <!-- TÓPICO 1 -->
+    <div class="card" id="topico1">
+      <h2>1. O que são investimentos?</h2>
+      <p>Investir significa colocar seu dinheiro em ativos com objetivo de fazê-lo crescer ao longo do tempo. É uma forma de proteger seu patrimônio contra a inflação e gerar renda extra.</p>
+      <p>Investimentos podem ser feitos de várias formas: renda fixa, ações, imóveis ou até empreendimentos próprios. A ideia é que seu dinheiro “trabalhe para você”, e não o contrário.</p>
+      <p>Além disso, investir exige planejamento e disciplina. Definir metas financeiras, entender seu perfil de risco e estudar os tipos de investimento é essencial para evitar perdas e alcançar resultados consistentes.</p>
+      <p>Investir não é só para ricos: mesmo pequenas quantias aplicadas regularmente podem crescer significativamente com o tempo graças aos juros compostos.</p>
+    </div>
+
+    <!-- TÓPICO 2 -->
+    <div class="card" id="topico2">
+      <h2>2. Renda fixa</h2>
+      <p>São investimentos previsíveis, com menor risco, como CDB, Tesouro Direto e LCIs/LCAs. Eles pagam uma taxa fixa ou atrelada a índices econômicos.</p>
+    </div>
+
+    <!-- TÓPICO 3 -->
+    <div class="card" id="topico3">
+      <h2>3. Renda variável</h2>
+      <p>Ações, fundos imobiliários e criptomoedas. Maior risco, maior retorno. É preciso estudar o mercado e entender a volatilidade antes de investir grandes quantias.</p>
+    </div>
+
+    <!-- TÓPICO 4 -->
+    <div class="card" id="topico4">
+      <h2>4. A importância de diversificar</h2>
+      <p>Não coloque todo seu dinheiro em um só investimento. Diversificar ajuda a reduzir riscos e aumenta a chance de resultados positivos mesmo em crises.</p>
+      <p>Investir em diferentes classes de ativos — como renda fixa, renda variável e imóveis — protege seu patrimônio. Se uma aplicação tiver resultados ruins, outras podem equilibrar os ganhos.</p>
+      <p>Diversificação também inclui setores e regiões diferentes. Por exemplo, ações de tecnologia, indústria e saúde podem reagir de formas distintas a eventos econômicos, protegendo seu portfólio.</p>
+      <p>Investidores experientes sempre criam uma carteira balanceada, alinhando risco e retorno conforme seus objetivos de curto, médio e longo prazo.</p>
+    </div>
+
+    <!-- TÓPICO 5 -->
+    <div class="card" id="topico5">
+      <h2>5. Fundos imobiliários (FIIs)</h2>
+      <p>Investir em FIIs permite ganhar renda de imóveis como shoppings, galpões e escritórios sem precisar comprar propriedades fisicamente.</p>
+    </div>
+
+    <!-- TÓPICO 6 -->
+    <div class="card" id="topico6">
+      <h2>6. Ações</h2>
+      <p>Ao comprar ações, você se torna sócio de uma empresa. É importante acompanhar balanços, notícias e o cenário econômico para decisões mais seguras.</p>
+    </div>
+
+    <!-- TÓPICO 7 -->
+    <div class="card" id="topico7">
+      <h2>7. Riscos e estratégias</h2>
+      <p>Investimentos envolvem riscos. Conhecer seu perfil e estudar estratégias ajuda a minimizar perdas e aproveitar oportunidades no mercado.</p>
+    </div>
+
+    <!-- TÓPICO 8 -->
+    <div class="card" id="topico8">
+      <h2>8. Diversificação avançada</h2>
+      <p>Além de espalhar entre renda fixa e variável, diversifique setores, moedas e regiões. Isso protege você de eventos inesperados que afetam apenas uma área do mercado.</p>
+    </div>
+
+    <!-- TÓPICO 9 -->
+    <div class="card" id="topico9">
+      <h2>9. Como investir na prática</h2>
+      <p>Abra conta em uma corretora confiável, comece com valores pequenos, estude cada ativo e aumente gradualmente conforme ganha experiência. Sempre acompanhe seus investimentos.</p>
+    </div>
+
+    <!-- TÓPICO 10 -->
+    <div class="card" id="topico10">
+      <h2>10. Construindo riqueza</h2>
+      <p>Invista regularmente, reinvista os lucros e busque educação financeira constante. Paciência, disciplina e diversificação são os segredos para crescimento sólido e sustentável.</p>
+      <p>Construir riqueza não acontece da noite para o dia. É um processo de longo prazo, baseado em decisões conscientes, estudo e acompanhamento do mercado.</p>
+      <p>Além de investir, controlar gastos, criar uma reserva de emergência e planejar metas financeiras ajuda a acelerar o crescimento do patrimônio.</p>
+      <p>Com o tempo, você poderá acessar investimentos mais avançados, como fundos internacionais, ações globais e estratégias de proteção de capital, aumentando ainda mais suas oportunidades.</p>
+    </div>
+
+    <!-- FRASE FINAL -->
+    <div class="agradecimento">Muito obrigado pela sua participação!</div>
+  </div>
+</div>
+
+<script>
+function login() {
+  const email = document.getElementById("emailInput").value.trim();
+  const emailRegex = /^[\w.-]+@[\w.-]+\.[A-Za-z]{2,}$/;
+
+  if (!emailRegex.test(email)) {
+    alert("E-mail inválido! Por favor, insira um e-mail válido.");
+    return;
+  }
+
+  document.getElementById("loginPage").style.display = "none";
+  document.getElementById("mainPage").style.display = "block";
+}
+</script>
+
+</body>
+</html>
